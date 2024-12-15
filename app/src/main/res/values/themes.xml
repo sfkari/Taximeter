@@ -1,0 +1,14 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.TaxiMeter" parent="Theme.Material3.Dark.NoActionBar">
+        <!-- Customize your light theme here. -->
+        <item name="colorPrimary">@color/black</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <item name="colorSecondary">@color/grisSombre</item>
+        <item name="colorOnSecondary">@color/grisSombre</item>
+        <item name="android:statusBarColor">@color/white</item>
+        <item name="android:windowLightStatusBar">true</item>
+    </style>
+
+    <style name="Theme.TaxiMeter" parent="Base.Theme.TaxiMeter" />
+</resources>

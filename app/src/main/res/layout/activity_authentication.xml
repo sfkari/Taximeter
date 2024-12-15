@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    tools:context=".AuthenticationActivity"
+    android:padding="30dp"
+    android:background="@drawable/bg">
+
+    <!-- Titre de l'application -->
+    <TextView
+        style="@style/titresClair"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/logoImageView"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="46dp"
+        android:text="TAXIMETER" />
+
+    <!-- Logo de l'application -->
+    <ImageView
+        android:id="@+id/logoImageView"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_above="@+id/linearLayout2"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/cercle"
+        android:padding="20dp"
+        android:src="@drawable/taxi" /> <!-- Remplacez par votre logo -->
+
+    <!-- Contenu du formulaire d'authentification -->
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="100dp"
+        android:orientation="vertical"
+        android:paddingHorizontal="20dp">
+
+        <!-- Champ Email -->
+        <EditText
+            android:id="@+id/edtEmail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/logoImageView"
+            android:layout_marginTop="20dp"
+            android:hint="Email"
+            android:inputType="textEmailAddress"
+            android:padding="10dp" />
+
+        <!-- Champ Mot de Passe -->
+
+
+        <RelativeLayout
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <!-- EditText -->
+            <EditText
+                android:id="@+id/edtPassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Mot de Passe"
+                android:inputType="textPassword"
+                android:paddingEnd="40dp"  />
+
+            <!-- ImageButton -->
+            <ImageButton
+                android:id="@+id/ibPassword"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/visibility_off"
+            android:background="?android:attr/selectableItemBackground" />
+        </RelativeLayout>
+
+
+        <!-- Champ Nom (pour Sign Up) -->
+        <EditText
+            android:id="@+id/edtName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/edtPassword"
+            android:layout_marginTop="10dp"
+            android:hint="Nom"
+            android:inputType="textPersonName"
+            android:padding="10dp"
+            android:visibility="gone" />
+
+        <EditText
+            android:id="@+id/edtAge"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/edtName"
+            android:layout_marginTop="10dp"
+            android:hint="Age"
+            android:inputType="number"
+            android:padding="10dp"
+            android:visibility="gone" />
+        <!-- Champ Type de Permis (pour Sign Up) -->
+        <Spinner
+            android:id="@+id/spinnerLicenseType"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/edtAge"
+            android:layout_marginTop="10dp"
+            android:visibility="gone" />
+
+        <!-- Bouton Inscription -->
+        <Button
+            android:id="@+id/btnSignUp"
+            style="@style/titresSombre"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/spinnerLicenseType"
+            android:layout_marginTop="20dp"
+            android:backgroundTint="@color/jauneTaxi"
+            android:text="S'inscrire"
+            android:visibility="gone" /> <!-- Cacher ce bouton pour la page de login -->
+
+        <!-- Bouton Connexion -->
+        <Button
+            android:id="@+id/btnSignIn"
+            style="@style/titresSombre"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/edtPassword"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="48dp"
+            android:backgroundTint="@color/jauneTaxi"
+            android:text="Se Connecter" />
+
+        <!-- Texte pour aller vers Sign Up -->
+        <TextView
+            android:id="@+id/txtSignUp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/btnSignIn"
+            android:layout_marginTop="20dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:text="Pas encore inscrit ? S'inscrire"
+            android:textColor="@color/bleu"
+            android:textSize="18dp" />
+
+        <!-- Texte pour aller vers Sign In -->
+        <TextView
+            android:id="@+id/txtSignIn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/btnSignIn"
+            android:layout_marginTop="20dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:text="Déjà membre ? Se connecter"
+            android:textColor="@color/bleu"
+            android:textSize="18dp"
+            android:visibility="gone" />
+
+    </LinearLayout>
+
+</RelativeLayout>
